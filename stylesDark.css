@@ -1,1 +1,55 @@
-/*Style sheet for dark styles*/
+html {
+    background-image: url('Images/AdobeStock_290108391.jpeg');
+    background-size: cover;
+    color: #19bf45;
+}
+
+h1 {
+    font-size: 200px;    
+    font-family: beatle, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: black 0px 0px 90px;
+    padding-top: 20px;
+}
+
+.black-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    padding-top: 1px;
+}
+
+.blacker-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin:auto;
+    width: 75%;
+    border-radius: 25px;
+    padding-top: 1px;
+}
+
+.blackest-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin:auto;
+    width: 60%;
+    border-radius: 25px;
+    padding-top: 1px;
+}
+
+p {
+    font-family: glodok, monospace;
+}
+
+.bold-paragraph {
+    font-size: 20px;
+}
+
+h2 {
+    font-family: ohno-blazeface, beatle, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 75px;
+}
