@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Digital Space Ghost</title>
+    <meta name="author" content="Briana Osborn">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--Add the async or defer attribute to your script tag in the header to prevent errors on page load with the JS.-->
+    <script src="streamBlog.js" defer></script>
+    <!--Link Stylesheet-->
+    <link rel="stylesheet" href="stylesLight.css">
+    <link rel="stylesheet" href="stylesDark.css">
+
+  </head>
+
+  <body>
+    <header>
+        <h1>Digital Space Ghost</h1>
+        <p>Ready to board?</p>
+        <p>Choose where to depart:</p>
+        <nav>
+            <ul>
+                <li><a href="#shopping">Shopping</a></li>
+                <li><a href="#stream">Stream</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#cosmic">Cosmic Dust Club</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="shopping">
+            <h2>Shopping</h2>
+            <!--Product Display - This would be a section of your page that allows the user to view some of the available products or services this company offers one at a time, by clicking on a control that includes the product name. Each "product" must include a name, image, and short description (at least a sentence or two) that is displayed when chosen. One product will display by default on page load, and only one product should ever display on screen at a time. (Module 4 - Event Handling & The DOM) - Watch a video demonstrating a product displayLinks to an external site. MUST ALSO INCLUDE THE GAME PLAY ON YOUR SITE IF YOU CHOOSE THE PRODUCT DISPLAY FEATURE-->
+
+            <!--OR Cost Calculator - This would be a section of your page that displays a collection of top products, probably for "quick order" or something similar. Each product would include an image, price and name, and some control that the user can click on to add that product to their total. The total/tax/shipping will display in the "total" area of the section, and the total cost should display the current product total, tax and/or shipping, and total price with tax on change (every time the control for a product is clicked, the total should update). Include a button allowing the user to "check out" that when clicked will clear the cart, display the total cost of the items that were in the cart, and thank the user for their order. If the cart is empty when the user. clicks to checkout, they should see a message asking them to add something to the cart before they check out. (Module 4 - Event Handling & The DOM, Module 1 - Arithmetic,  Module 3 - Arrays) - Watch a video demonstrating the cost calculator/shopping cartLinks to an external site.-->
+
+            <!--Game Play - This section will most likely make sense as a sort of "contest" for the user. There will be an input where the user enters a number between 1 and 10. You will generate a random number that you display to the screen (with that the user guessed), and either declare them a winner (their guess matches the random number) or ask them to try again (their guess does not match the random number). You don't have to actually do anything when they "win" except say that they won. (Module 6 - Math Object, Module 4 - Event Handling & The DOM, Module 2 - Conditionals, possibly also M5 for validation) - Watch a video demonstrating the game playLinks to an external site. MUST ALSO INCLUDE THE PRODUCT DISPLAY ON YOUR SITE IF YOU CHOOSE THE GAME PLAY FEATURE-->
+
+
+        </section>
+        <section id="stream">
+            <h2>Stream</h2>
+            <p>Catch the latest streams and previous VODS on these streaming platforms:</p>
+            <h3>Twitch</h3>
+            <a href="https://www.twitch.tv/digitalspaceghost"><img src="Images\twitch.png" alt="Twitch TV Streaming Icon"></a>
+            <h3>Youtube</h3>
+            <a href="https://www.youtube.com/@digitalspaceghost"><img src="Images\developed-with-youtube-sentence-case-dark.png" alt="Youtube's Developed with Youtube Logo"></img></a>
+            <h3>Kick</h3>
+            <a href="https://kick.com/digitalspaceghost"><img src="Images\kick.PNG" alt="Kick branded Logo"></a>
+        </section>
+        <section id="highlights">
+            <h2>Videos and Highlights</h2>
+            <p>Watch my latest upload:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-2AC7ID0yc8?si=-Q-Mx7Ob_ZJQnym6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        <section id="cosmic">
+            <h2>Cosmic Dust Club</h2>
+            <p>Never miss an upload again!</p>
+            <p>Tired of missing out on merch drops? Want a notification when I go live? Sign up for the cosmic dust club and never miss out again!</p>
+             <!--A contact form. This should have at least these inputs:
+            full name (or first and last name separately)
+            phone number
+            email address
+            comments
+            a radio set that allows the user to choose whether they'd like to be contacted by phone or email.
+            The name(s) and comments should be required, and the choice of how the user would like to be contacted should require either the phone or email (depending on what the user chose). The form should validate the required fields on submit (using regex, at least for the email and phone) and it should use the valid user info to create an object (customer) when the form is valid and submitted. Errors in the form should display to the user next to the input with the error and should be descriptive and noticeable. When the form is complete and submitted properly, the form should reset and display a message to the user thanking them for their submission, with the info they submitted, pulled from the object you created.-->
+            <form>
+                <h3>Cosmic Dust Club</h3>
+                <!--Input for Full Name-->
+                <label for="fullName">Full Name</label>
+                <input id="fullName"type="text" id="fullName" name="fullName" required>
+                <!--Phone Number input-->
+                <label for="phone">Phone</label>
+                <input id="phone"type="tel"  required>
+                <!--Email Address input-->
+                <input id="email" type="radio" name="contact" value="email" required>
+		        <label for="email">Email</label>
+                <!--Preferred Contact method-->
+                <fieldset required>
+                    <legend>Preferred Contact Method</legend>
+                    <input id="phone" type="radio" name="contact" value="phone" required>
+                    <label for="Phone">Phone</label>
+                    <input id="email" type="radio" name="contact" value="email">
+                    <label for="email">Email</label>
+                </fieldset>
+                <!--Comments Entry-->
+                <label for="message">Message</label>
+	            <textarea id="message" required></textarea>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+  </body>
+</html>

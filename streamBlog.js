@@ -1,0 +1,2 @@
+//Your JS should "use strict"; globally
+//You may upload your files to be hosted online publicly as long as you obfuscate the JS file before uploading itLinks to an external site. (do not obfuscate the JS file you submit for grading)
