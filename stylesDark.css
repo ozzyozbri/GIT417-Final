@@ -1,3 +1,5 @@
+/* Global Styles and header styles */
+
 html {
     background-image: url('Images/AdobeStock_290108391.jpeg');
     background-size: cover;
@@ -41,15 +43,153 @@ h1 {
 
 p {
     font-family: glodok, monospace;
+    color:#FF446C;
+}
+
+header p {
+    font-size: 25px;
 }
 
 .bold-paragraph {
     font-size: 20px;
+    padding-bottom: 15px;
 }
 
 h2 {
-    font-family: ohno-blazeface, beatle, sans-serif;
+    font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
     font-style: normal;
     font-weight: 100;
     font-size: 75px;
 }
+
+h3 {
+    font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+/* Navigation Styling */
+nav ul {
+    padding-top: 20px;
+    list-style-type: none;
+    color: #00B7FF;
+    padding-bottom: ;
+}
+
+li {
+    display: inline;
+    margin: 45px;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+a {
+    font-family: 'glodok', 'Courier New', monospace;;
+    font-style: normal;
+    font-weight: 100;
+}
+
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none; 
+    color: inherit;
+  } 
+
+  /* Shopping Section styling */
+ 
+  #shopping h2 {
+    padding-top: 70px;
+    margin: auto;
+  }
+
+  #shopping p {
+    font-size: 20px;
+    margin-top: none;
+  }
+
+  button {
+    background-color: #00B7FF; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px;
+  }
+
+
+
+
+  /* Stream Section Styling */
+
+  #stream h2 {
+    margin: auto;
+    padding-top: 70px;
+  }
+
+  #stream p {
+    font-size: 20px;
+  }
+
+/* Highlights Section Styling */
+
+#highlights h2 {
+    margin: auto;
+    padding-top: 70px;
+  }
+
+  #highlights p {
+    font-size: 20px;
+  }
+
+
+  /* Cosmic Dust Club Styling */
+
+  #cosmic h2 {
+    margin: auto;
+    padding-top: 70px;
+  }
+
+  #cosmic p {
+    font-size: 20px;
+  }
+
+
+  label {
+    display: block;
+    margin-top: 15px;
+  }
+
+  fieldset {
+    width: auto;
+  }
+
+  fieldset legend {
+    padding-top: 10px;
+  }
+
+  fieldset label {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  #submit-button {
+    display: block;
+    background-color:#00B7FF;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+  }

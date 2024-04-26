@@ -18,6 +18,7 @@
         <div class="blackest-box"></div>
             <header>
                 <h1>Digital Space Ghost</h1>
+                <p>Welcome! My name is Bri and this is my site. I'm a streamer obsessed with all things space, gaming, and art related. Join the club and hang out with me! </p>
                 <p class="bold-paragraph">Ready to board?</p>
                 <p class="bold-paragraph">Choose where to depart:</p>
                 <nav>
@@ -32,7 +33,20 @@
             <main>
                 <section id="shopping">
                     <h2>Shopping</h2>
+                    <p>These are the current products I'm offering in my storefront.</p>
                     <!--Product Display - This would be a section of your page that allows the user to view some of the available products or services this company offers one at a time, by clicking on a control that includes the product name. Each "product" must include a name, image, and short description (at least a sentence or two) that is displayed when chosen. One product will display by default on page load, and only one product should ever display on screen at a time. (Module 4 - Event Handling & The DOM) - Watch a video demonstrating a product displayLinks to an external site. MUST ALSO INCLUDE THE GAME PLAY ON YOUR SITE IF YOU CHOOSE THE PRODUCT DISPLAY FEATURE-->
+                    <img id="productImage"src="Images\phone_case.jpg" alt="space themed phone case on iphone">
+                    <div id="productDescription">
+                        <p>A space themed phone case. This phone case is available in all iphone, android, and samsung models.</p>
+                    <div id="productDescription"></div>
+                    <div id="productPrice">
+                        <p>$15.00</p>
+                    </div>
+                    <button id="phoneCaseButton" type="button">Phone Case</button>
+                    <button id="tShirtButton" type="button">T-Shirt</button>
+                    <button id="petAlienButton"type="button">Pet Alien</button>
+                    <button id="fullMechSuitButton"type="button">Full Mech Suit</button>
+                    <button id="robotHelperButton"type="button">Robot Helper</button>
 
                     <!--OR Cost Calculator - This would be a section of your page that displays a collection of top products, probably for "quick order" or something similar. Each product would include an image, price and name, and some control that the user can click on to add that product to their total. The total/tax/shipping will display in the "total" area of the section, and the total cost should display the current product total, tax and/or shipping, and total price with tax on change (every time the control for a product is clicked, the total should update). Include a button allowing the user to "check out" that when clicked will clear the cart, display the total cost of the items that were in the cart, and thank the user for their order. If the cart is empty when the user. clicks to checkout, they should see a message asking them to add something to the cart before they check out. (Module 4 - Event Handling & The DOM, Module 1 - Arithmetic,  Module 3 - Arrays) - Watch a video demonstrating the cost calculator/shopping cartLinks to an external site.-->
 
@@ -43,12 +57,9 @@
                 <section id="stream">
                     <h2>Stream</h2>
                     <p>Catch the latest streams and previous VODS on these streaming platforms:</p>
-                    <h3>Twitch</h3>
-                    <a href="https://www.twitch.tv/digitalspaceghost"><img src="Images\twitch.png" alt="Twitch TV Streaming Icon"></a>
-                    <h3>Youtube</h3>
-                    <a href="https://www.youtube.com/@digitalspaceghost"><img src="Images\developed-with-youtube-sentence-case-dark.png" alt="Youtube's Developed with Youtube Logo"></img></a>
-                    <h3>Kick</h3>
-                    <a href="https://kick.com/digitalspaceghost"><img src="Images\kick.PNG" alt="Kick branded Logo"></a>
+                    <a href="https://www.twitch.tv/digitalspaceghost" target="_blank"><img src="Images\twitch.png" alt="Twitch TV Streaming Icon" width="200" height="200"></a>
+                    <a href="https://www.youtube.com/@digitalspaceghost" target="_blank"><img src="Images\youtube.png" alt="Youtube's Developed with Youtube Logo" width="200" height="200"></img></a>
+                    <a href="https://kick.com/digitalspaceghost" target="_blank"><img src="Images\kick.PNG" alt="Kick branded Logo" width="200" height="200"></a>
                 </section>
                 <section id="highlights">
                     <h2>Videos and Highlights</h2>
@@ -66,8 +77,7 @@
                     comments
                     a radio set that allows the user to choose whether they'd like to be contacted by phone or email.
                     The name(s) and comments should be required, and the choice of how the user would like to be contacted should require either the phone or email (depending on what the user chose). The form should validate the required fields on submit (using regex, at least for the email and phone) and it should use the valid user info to create an object (customer) when the form is valid and submitted. Errors in the form should display to the user next to the input with the error and should be descriptive and noticeable. When the form is complete and submitted properly, the form should reset and display a message to the user thanking them for their submission, with the info they submitted, pulled from the object you created.-->
-                    <form>
-                        <h3>Cosmic Dust Club</h3>
+                    <form id="cosmicClub">
                         <!--Input for Full Name-->
                         <label for="fullName">Full Name</label>
                         <input id="fullName"type="text" id="fullName" name="fullName" required>
@@ -75,8 +85,8 @@
                         <label for="phone">Phone</label>
                         <input id="phone"type="tel"  required>
                         <!--Email Address input-->
-                        <input id="email" type="radio" name="contact" value="email" required>
                         <label for="email">Email</label>
+                        <input id="email" type="email" name="contact" value="email" required>
                         <!--Preferred Contact method-->
                         <fieldset required>
                             <legend>Preferred Contact Method</legend>
@@ -87,8 +97,8 @@
                         </fieldset>
                         <!--Comments Entry-->
                         <label for="message">Message</label>
-                        <textarea id="message" required></textarea>
-                        <input type="submit" name="submit" value="Submit">
+                        <textarea id="message" rows="5" cols="60" required></textarea>
+                        <input id="submit-button"type="submit" name="submit" value="Submit">
                     </form>
                 </section>
             </main>
