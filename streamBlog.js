@@ -1,5 +1,5 @@
 //Your JS should "use strict"; globally
-"use strict"
+"use strict";
 //You may upload your files to be hosted online publicly as long as you obfuscate the JS file before uploading itLinks to an external site. (do not obfuscate the JS file you submit for grading)
 
 //Shopping Tab Script
@@ -10,7 +10,7 @@ let productPrice = document.getElementById('productPrice');
 
 //Change Product to Phone Case
 function phoneProductChange() {
-    productDescription.innerHtml = '<p>A space themed phone case. This phone case is available in all iphone, android, and samsung models.</p>';
+    productDescription.innerHTML = '<p>A space themed phone case. This phone case is available in all iphone, android, and samsung models.</p>';
     productPrice.innerHTML = '<p>$15.00</p>';
     document.getElementById('productImage').src = 'Images/phone_case.jpg';
 };
