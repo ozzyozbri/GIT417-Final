@@ -60,6 +60,24 @@ robotHelperButton.addEventListener('click', robotHelperProductChange);
 
 
 
+
+
+//Game Winner Section
+
+let outcome = document.getElementById('outcome');
+
+function randomNumber() {
+     let randNumber = Math.floor(Math.random() * 11);
+     if (randNumber == 7) {
+        outcome.innerHTML = `<p>You're a winner!</p>`;
+     } else {
+        outcome.innerHTML = `<p>Sorry, you are not a winner.</p>`
+     };
+     console.log(randNumber);
+}
+
+randomButton.addEventListener('click', randomNumber);
+
 //Form Submission 
 function validateForm() {
     let email = document.getElementById("email").value;
