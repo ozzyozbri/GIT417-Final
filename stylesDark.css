@@ -132,7 +132,20 @@ a:link, a:visited, a:hover, a:active {
     padding-right: 10px;
   }
 
-  #randomButton {
+  #shopping form {
+    display: block;
+
+  }
+
+  #shopping label {
+    padding: 5px;
+  }
+
+  #textGuess {
+    margin-bottom: 10px;
+  }
+
+  #submit {
     display: block;
     background-color:#00B7FF;
     border: none;
@@ -211,4 +224,8 @@ a:link, a:visited, a:hover, a:active {
     cursor: pointer;
     width: 100px;
     margin: 0 auto;
+  }
+
+  #finalOutput {
+    padding: 15px;
   }

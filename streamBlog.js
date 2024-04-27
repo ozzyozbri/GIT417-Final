@@ -66,32 +66,52 @@ robotHelperButton.addEventListener('click', robotHelperProductChange);
 
 let outcome = document.getElementById('outcome');
 
-function randomNumber() {
-     let randNumber = Math.floor(Math.random() * 11);
-     if (randNumber == 7) {
-        outcome.innerHTML = `<p>You're a winner!</p>`;
-     } else {
-        outcome.innerHTML = `<p>Sorry, you are not a winner.</p>`
-     };
-     console.log(randNumber);
-}
+function getValue() {
+    let guestGuess = document.getElementById('textGuess');
+    let guestFinalGuess = guestGuess.value;
+    console.log(guestFinalGuess);
+    if (guestFinalGuess == 7) {
+        outcome.innerHTML = "<p>You're a winner!</p>";
+    } else {
+        outcome.innerHTML = "<p>Sorry, you are not a winner.</p>"
+    }
+};
 
-randomButton.addEventListener('click', randomNumber);
 
-//Form Submission 
+
+// Form Validation 
+//The form should validate the required fields on submit (using regex, at least for the email and phone) and it should use the valid user info to create an object (customer) when the form is valid and submitted. Errors in the form should display to the user next to the input with the error and should be descriptive and noticeable. When the form is complete and submitted properly, the form should reset and display a message to the user thanking them for their submission, with the info they submitted, pulled from the object you created.
+
+let finalOutput = document.getElementById('finalOutput');
+let userEntry = document.getElementById('userEntry');
 function validateForm() {
-    let email = document.getElementById("email").value;
-    let email2 = document.getElementById("email");
-    let fullName = document.getElementById("fullName").value;
-    let fullName2 = document.getElementById("fullName");
-    let re = 
-                /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if (re.test(email)) {
-                alert("done");
-                return true;
-            }
-            else {
-                email2.style.border = "red solid 3px";
-                return false;
-            }
+    let userObject = {};
+    let name = document.getElementById('fullName').value;
+    let nameRGEX = /[a-zA-Z]+/;
+    let nameResult = nameRGEX.test(name);
+    console.log("name:" + nameResult);
+    let phone = document.getElementById('phone').value;
+    let phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+    let phoneResult = phoneRGEX.test(phone);
+    console.log("phone:" + phoneResult);
+    let email = document.getElementById('email').value;
+    let emailRGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let emailResult = emailRGEX.test(email);
+    console.log("email:" + emailResult); 
+    if (nameResult == false) {
+        alert('Please enter your full name only.');
+    } else if (phoneResult == false) {
+        alert('Please only enter numbers in the telephone field.');
+    } else if (emailResult == false){
+        alert('Please enter a valid email');
+    } else {
+        finalOutput.innerHTML = '<p>Thank you for your submission!</p>';
+        userObject.name = name;
+        userObject.phone = phone;
+        userObject.email = email;
+        document.getElementById("userEntry").innerHTML = "Name: " + userObject.name+ '<br>' + " Phone: " + userObject.phone + '<br>'+ " Email: " + userObject.email + '<br>' + " Communication Preference " + userObject.communicationPreference;
+        document.getElementById("cosmicClubForm").reset();
+    };
+    event.preventDefault();
+    console.log(userObject);
 };

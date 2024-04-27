@@ -50,8 +50,12 @@
 
                     <!--Game Play - This section will most likely make sense as a sort of "contest" for the user. There will be an input where the user enters a number between 1 and 10. You will generate a random number that you display to the screen (with that the user guessed), and either declare them a winner (their guess matches the random number) or ask them to try again (their guess does not match the random number). You don't have to actually do anything when they "win" except say that they won. (Module 6 - Math Object, Module 4 - Event Handling & The DOM, Module 2 - Conditionals, possibly also M5 for validation) - Watch a video demonstrating the game playLinks to an external site. MUST ALSO INCLUDE THE PRODUCT DISPLAY ON YOUR SITE IF YOU CHOOSE THE GAME PLAY FEATURE-->
                     <h3>Wanna win a free tshirt? Play our game to find out if you're a winner!</h3>
-                    <p>Please press the button below to generate a random number. If you land on the lucky number 7, we will send you a free T-shirt via details from your Cosmic Dust club membership.</p>
-                    <input id="randomButton" type="button" value="Click this button!"></button>
+                    <p>Please enter a number between 1 and 10. If you guess our lucky number, we will send you a free shirt!</p>
+                    <form>
+                        <label id="guestGuess" for="guestGuess">Enter your guess!</label>
+                        <input type="text" id="textGuess" name="textGuess">
+                        <button id="submit" type="button" onclick="getValue()">Submit</button>
+                    </form>
                     <p id="outcome"></p>
                 </section>
                 <section id="stream">
@@ -77,7 +81,7 @@
                     comments
                     a radio set that allows the user to choose whether they'd like to be contacted by phone or email.
                     The name(s) and comments should be required, and the choice of how the user would like to be contacted should require either the phone or email (depending on what the user chose). The form should validate the required fields on submit (using regex, at least for the email and phone) and it should use the valid user info to create an object (customer) when the form is valid and submitted. Errors in the form should display to the user next to the input with the error and should be descriptive and noticeable. When the form is complete and submitted properly, the form should reset and display a message to the user thanking them for their submission, with the info they submitted, pulled from the object you created.-->
-                    <form id="cosmicClub">
+                    <form id="cosmicClubForm" onsubmit="validateForm()">
                         <!--Input for Full Name-->
                         <label for="fullName">Full Name</label>
                         <input id="fullName"type="text" id="fullName" name="fullName" required>
@@ -86,20 +90,22 @@
                         <input id="phone"type="tel"  required>
                         <!--Email Address input-->
                         <label for="email">Email</label>
-                        <input id="email" type="email" name="contact" value="email" required>
+                        <input id="email" type="email" name="contact" required>
                         <!--Preferred Contact method-->
                         <fieldset required>
                             <legend>Preferred Contact Method</legend>
-                            <input id="phone" type="radio" name="contact" value="phone" required>
+                            <input id="=radio" type="radio" name="contact" required>
                             <label for="Phone">Phone</label>
-                            <input id="email" type="radio" name="contact" value="email">
+                            <input id="=radio" type="radio" name="contact">
                             <label for="email">Email</label>
                         </fieldset>
                         <!--Comments Entry-->
                         <label for="message">Message</label>
-                        <textarea id="message" rows="5" cols="60" required></textarea>
+                        <textarea id="message" rows="5" cols="60"></textarea>
                         <input id="submit-button"type="submit" name="submit" value="Submit">
                     </form>
+                    <p id="finalOutput"></p>
+                    <p id="userEntry"></p>
                 </section>
             </main>
         </div>
