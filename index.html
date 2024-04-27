@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Digital Space Ghost</title>
     <meta name="author" content="Briana Osborn">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--Add the async or defer attribute to your script tag in the header to prevent errors on page load with the JS.-->
     <script src="streamBlog.js" defer></script>
     <!--Link Stylesheet-->
@@ -36,24 +36,25 @@
                     <h2>Shopping</h2>
                     <p>These are the current products I'm offering in my storefront.</p>
                     <!--Product Display - This would be a section of your page that allows the user to view some of the available products or services this company offers one at a time, by clicking on a control that includes the product name. Each "product" must include a name, image, and short description (at least a sentence or two) that is displayed when chosen. One product will display by default on page load, and only one product should ever display on screen at a time. (Module 4 - Event Handling & The DOM) - Watch a video demonstrating a product displayLinks to an external site. MUST ALSO INCLUDE THE GAME PLAY ON YOUR SITE IF YOU CHOOSE THE PRODUCT DISPLAY FEATURE-->
-                    <img id="productImage"src="Images\phone_case.jpg" alt="space themed phone case on iphone">
+                    <img id="productImage" src="Images/phone_case.jpg" alt="space themed phone case on iphone">
+                    <!--Image Citation: https://deepai.org/machine-learning-model/text2img-->
                     <div id="productDescription">
                         <p>A space themed phone case. This phone case is available in all iphone, android, and samsung models.</p>
-                    <div id="productDescription"></div>
+                    </div>
                     <div id="productPrice">
                         <p>$15.00</p>
                     </div>
                     <button id="phoneCaseButton" type="button">Phone Case</button>
                     <button id="tShirtButton" type="button">T-Shirt</button>
-                    <button id="petAlienButton"type="button">Pet Alien</button>
-                    <button id="fullMechSuitButton"type="button">Full Mech Suit</button>
-                    <button id="robotHelperButton"type="button">Robot Helper</button>
+                    <button id="petAlienButton" type="button">Pet Alien</button>
+                    <button id="fullMechSuitButton" type="button">Full Mech Suit</button>
+                    <button id="robotHelperButton" type="button">Robot Helper</button>
 
                     <!--Game Play - This section will most likely make sense as a sort of "contest" for the user. There will be an input where the user enters a number between 1 and 10. You will generate a random number that you display to the screen (with that the user guessed), and either declare them a winner (their guess matches the random number) or ask them to try again (their guess does not match the random number). You don't have to actually do anything when they "win" except say that they won. (Module 6 - Math Object, Module 4 - Event Handling & The DOM, Module 2 - Conditionals, possibly also M5 for validation) - Watch a video demonstrating the game playLinks to an external site. MUST ALSO INCLUDE THE PRODUCT DISPLAY ON YOUR SITE IF YOU CHOOSE THE GAME PLAY FEATURE-->
                     <h3>Wanna win a free tshirt? Play our game to find out if you're a winner!</h3>
                     <p>Please enter a number between 1 and 10. If you guess our lucky number, we will send you a free shirt!</p>
                     <form>
-                        <label id="guestGuess" for="guestGuess">Enter your guess!</label>
+                        <label id="guestGuess">Enter your guess!</label>
                         <input type="text" id="textGuess" name="textGuess">
                         <button id="submit" type="button" onclick="getValue()">Submit</button>
                     </form>
@@ -62,14 +63,17 @@
                 <section id="stream">
                     <h2>Stream</h2>
                     <p>Catch the latest streams and previous VODS on these streaming platforms:</p>
-                    <a href="https://www.twitch.tv/digitalspaceghost" target="_blank"><img src="Images\twitch.png" alt="Twitch TV Streaming Icon" width="200" height="200"></a>
-                    <a href="https://www.youtube.com/@digitalspaceghost" target="_blank"><img src="Images\youtube.png" alt="Youtube's Developed with Youtube Logo" width="200" height="200"></img></a>
-                    <a href="https://kick.com/digitalspaceghost" target="_blank"><img src="Images\kick.PNG" alt="Kick branded Logo" width="200" height="200"></a>
+                    <!--Image Citation: Twitch. (n.d.). TwitchGlitchPurple. Twitch.tv. Retrieved from https://brand.twitch.tv/. -->
+                    <a href="https://www.twitch.tv/digitalspaceghost" target="_blank"><img src="Images/twitch.png" alt="Twitch TV Streaming Icon" width="200" height="200"></a>
+                    <!--Image Citation: https://brandfetch.com/youtube.com?library=default&collection=logos&asset=idDRJsnQU0&view=overview-->
+                    <a href="https://www.youtube.com/@digitalspaceghost" target="_blank"><img src="Images/youtube.png" alt="Youtube's Developed with Youtube Logo" width="200" height="200"></a>
+                    <!--Image Citation: https://kickcommunity.com/kick-assets-elevate-your-live-streams/-->
+                    <a href="https://kick.com/digitalspaceghost" target="_blank"><img src="Images/kick.PNG" alt="Kick branded Logo" width="200" height="200"></a>
                 </section>
                 <section id="highlights">
                     <h2>Videos and Highlights</h2>
                     <p>Watch my latest upload:</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-2AC7ID0yc8?si=-Q-Mx7Ob_ZJQnym6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-2AC7ID0yc8?si=-Q-Mx7Ob_ZJQnym6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </section>
                 <section id="cosmic">
                     <h2>Cosmic Dust Club</h2>
@@ -85,31 +89,34 @@
                     <form id="cosmicClubForm" onsubmit="validateForm()">
                         <!--Input for Full Name-->
                         <label for="fullName">Full Name</label>
-                        <input id="fullName"type="text" id="fullName" name="fullName" required>
+                        <input id="fullName" type="text" name="fullName" required>
                         <!--Phone Number input-->
                         <label for="phone">Phone</label>
-                        <input id="phone"type="tel"  required>
+                        <input id="phone" type="tel"  required>
                         <!--Email Address input-->
                         <label for="email">Email</label>
                         <input id="email" type="email" name="contact" required>
                         <!--Preferred Contact method-->
-                        <fieldset required>
+                        <fieldset>
                             <legend>Preferred Contact Method</legend>
-                            <input id="=radio" type="radio" name="contact" required>
-                            <label for="Phone">Phone</label>
-                            <input id="=radio" type="radio" name="contact">
+                            <input id="radioPhone" type="radio" name="contact" required>
+                            <label for="phone">Phone</label>
+                            <input id="radioEmail" type="radio" name="contact" required>
                             <label for="email">Email</label>
                         </fieldset>
                         <!--Comments Entry-->
                         <label for="message">Message</label>
-                        <textarea id="message" rows="5" cols="60"></textarea>
-                        <input id="submit-button"type="submit" name="submit" value="Submit">
+                        <textarea id="message" rows="5" cols="60" required></textarea>
+                        <input id="submit-button" type="submit" name="submit" value="Submit">
                     </form>
                     <p id="finalOutput"></p>
                     <p id="userEntry"></p>
                 </section>
             </main>
         </div>
-    </div>
+        <footer>
+            <p>Author: Briana Osborn</p>
+            <p>GIT417 2024</p>
+        </footer>
   </body>
 </html>

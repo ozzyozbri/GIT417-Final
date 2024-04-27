@@ -1,13 +1,21 @@
 /* Global Styles and header styles */
 
 html {
+  /* Image Citation: 
+  badrus. (n.d.). Vector space background. Cute flat style template with Stars in Outer space. Retrieved from https://stock.adobe.com/images/vector-space-background-cute-flat-style-template-with-stars-in-outer-space/290108391?prev_url=detail.  */
     background-image: url('Images/AdobeStock_290108391.jpeg');
     background-size: cover;
     color: #19bf45;
 }
 
+body {
+  width: 1280px;
+}
+
 h1 {
-    font-size: 200px;    
+    font-size: 200px;   
+    /* Font Citation: Designed by Maximiliano Sproviero. From Sproviero Type.
+https://fonts.adobe.com/fonts/beatle#fonts-s */
     font-family: beatle, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -42,6 +50,7 @@ h1 {
 }
 
 p {
+  /* Font Citation: Designed by Novia Jonatan. From Sudtipos. https://fonts.adobe.com/fonts/glodok */
     font-family: glodok, monospace;
     color:#FF446C;
 }
@@ -56,6 +65,8 @@ header p {
 }
 
 h2 {
+  /* Font Citation: Designed by James Edmondson. From OH no Type Co..
+  https://fonts.adobe.com/fonts/ohno-blazeface */
     font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
     font-style: normal;
     font-weight: 100;
@@ -63,6 +74,8 @@ h2 {
 }
 
 h3 {
+  /* Font Citation: Designed by James Edmondson. From OH no Type Co..
+  https://fonts.adobe.com/fonts/ohno-blazeface */
     font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
     font-style: normal;
     font-weight: 100;
@@ -71,17 +84,11 @@ h3 {
 
 
 
-
-
-
-
-
 /* Navigation Styling */
 nav ul {
     padding-top: 20px;
     list-style-type: none;
     color: #00B7FF;
-    padding-bottom: ;
 }
 
 li {
@@ -111,7 +118,6 @@ a:link, a:visited, a:hover, a:active {
 
   #shopping p {
     font-size: 20px;
-    margin-top: none;
   }
 
   button {

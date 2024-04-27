@@ -1,21 +1,20 @@
-/*The site will be a single page that displays properly styled at 1280px wide (fixed)*/
-
-
-
-/*Include a control and the proper functionality to allow the user to choose whether to display your site in light or dark modeLinks to an external site..*/
-/*https://www.geeksforgeeks.org/how-to-create-dark-light-mode-for-website-using-javascript-jquery/*/
-
-
 /* Global Styles and header styles */
 
 html {
+    /* Image Citation:display: Sylverarts. (n.d.). Space seamless background with planets, stars, asteroids and comets, undiscovered galaxy cosmic fantastic and interesting textile fabric for children, endless tiling pattern, vector illustration. Retrieved from https://stock.adobe.com/images/space-seamless-background-with-planets-stars-asteroids-and-comets-undiscovered-galaxy-cosmic-fantastic-and-interesting-textile-fabric-for-children-endless-tiling-pattern-vector-illustration/304096071?prev_url=detail&asset_id=304096071.  */
     background-image: url('Images/light_background.png');
     background-size: cover;
     color: #050A30;
 }
 
+body {
+    width: 1280px;
+  }
+
 h1 {
-    font-size: 200px;    
+    font-size: 200px;   
+    /* Font Citation: Designed by Maximiliano Sproviero. From Sproviero Type.
+    https://fonts.adobe.com/fonts/beatle#fonts-s */ 
     font-family: beatle, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -50,6 +49,7 @@ h1 {
 }
 
 p {
+    /* Font Citation: Designed by Novia Jonatan. From Sudtipos. https://fonts.adobe.com/fonts/glodok */
     font-family: glodok, monospace;
     color:#274472;
 }
@@ -64,6 +64,8 @@ header p {
 }
 
 h2 {
+    /* Font Citation: Designed by James Edmondson. From OH no Type Co..
+    https://fonts.adobe.com/fonts/ohno-blazeface */
     font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
     font-style: normal;
     font-weight: 100;
@@ -71,6 +73,8 @@ h2 {
 }
 
 h3 {
+    /* Font Citation: Designed by James Edmondson. From OH no Type Co..
+    https://fonts.adobe.com/fonts/ohno-blazeface */
     font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
     font-style: normal;
     font-weight: 100;
@@ -89,7 +93,6 @@ nav ul {
     padding-top: 20px;
     list-style-type: none;
     color: #5885AF;
-    padding-bottom: ;
 }
 
 li {
@@ -119,7 +122,6 @@ a:link, a:visited, a:hover, a:active {
 
   #shopping p {
     font-size: 20px;
-    margin-top: none;
   }
 
   button {

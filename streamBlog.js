@@ -26,6 +26,7 @@ let productPrice = document.getElementById('productPrice');
 function phoneProductChange() {
     productDescription.innerHTML = '<p>A space themed phone case. This phone case is available in all iphone, android, and samsung models.</p>';
     productPrice.innerHTML = '<p>$15.00</p>';
+    // Image Citation: https://deepai.org/machine-learning-model/text2img
     document.getElementById('productImage').src = 'Images/phone_case.jpg';
 };
 
@@ -35,6 +36,7 @@ let tShirtButton = document.getElementById('tShirtButton');
 function tShirtProductChange() {
     productDescription.innerHTML = '<p>A space themed t shirt! This t-shirt is available from sizes XS-4XL.</p>';
     productPrice.innerHTML = '<p>$20.00.</p>';
+    //Image Citation: https://deepai.org/machine-learning-model/text2img
     document.getElementById('productImage').src = 'Images/spaceShirt.png';
 };
 
@@ -44,6 +46,7 @@ let petAlienButton = document.getElementById('petAlienButton');
 function petAlienProductChange() {
     productDescription.innerHTML = '<p>A pet alien! There are many shapes and sizes to choose from. They are excellent companions aboard your ship.</p>';
     productPrice.innerHTML = '<p>$100.00</p>';
+    //Image Citation: https://deepai.org/machine-learning-model/cute-creature-generator
     document.getElementById('productImage').src = 'Images/alienPet.jpg';
 };
 
@@ -53,6 +56,7 @@ let fullMechSuitButton = document.getElementById('fullMechSuitButton');
 function fullMechSuitProductChange() {
     productDescription.innerHTML = '<p>A full mech suit. This suit is custsom made to order. You never know what kind of protection you will need out there in space.</p>';
     productPrice.innerHTML = '<p>$950,000.00</p>';
+    // Image Citation: https://deepai.org/machine-learning-model/cyberpunk-generator
     document.getElementById('productImage').src = 'Images/mech.jpg';
 };
 
@@ -62,6 +66,7 @@ let robotHelperButton = document.getElementById('robotHelperButton');
 function robotHelperProductChange() {
     productDescription.innerHTML = '<p>A robot helper! This robot is equipped with full combat ability and includes a wealth of AI knowledge. Robot helpers are great for everyday tasks, combat assistance, and they make great companions.</p>';
     productPrice.innerHTML = '<p>$3,000,000.00</p>';
+    //Image Citation: https://deepai.org/machine-learning-model/cyberpunk-generator
     document.getElementById('productImage').src = 'Images/robot.jpg';
 };
 
@@ -112,6 +117,13 @@ function validateForm() {
     let emailRGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let emailResult = emailRGEX.test(email);
     console.log("email:" + emailResult); 
+    let message = document.getElementById('message').value;
+    console.log(message);
+    if (document.getElementById('radioPhone').checked) {    
+        userObject.communicationPreference = "Phone";
+    } else if (document.getElementById('radioEmail').checked) {
+        userObject.communicationPreference = "Email"
+    };
     if (nameResult == false) {
         alert('Please enter your full name only.');
     } else if (phoneResult == false) {
@@ -123,7 +135,8 @@ function validateForm() {
         userObject.name = name;
         userObject.phone = phone;
         userObject.email = email;
-        document.getElementById("userEntry").innerHTML = "Name: " + userObject.name+ '<br>' + " Phone: " + userObject.phone + '<br>'+ " Email: " + userObject.email + '<br>' + " Communication Preference " + userObject.communicationPreference;
+        userObject.message = message;
+        document.getElementById("userEntry").innerHTML = "Name: " + userObject.name+ '<br>' + " Phone: " + userObject.phone + '<br>'+ " Email: " + userObject.email + '<br>' + " Communication Preference:  " + userObject.communicationPreference + '<br' + userObject.message;
         document.getElementById("cosmicClubForm").reset();
     };
     event.preventDefault();
