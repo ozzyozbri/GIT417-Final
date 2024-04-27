@@ -2,6 +2,20 @@
 "use strict";
 //You may upload your files to be hosted online publicly as long as you obfuscate the JS file before uploading itLinks to an external site. (do not obfuscate the JS file you submit for grading)
 
+// Toggle Between light and dark mode
+function toggleTheme() {
+    let sheets = document.getElementsByTagName('link')[0];
+
+    // Change the value of href attribute
+    //Changes the css sheet.
+    if (theme.getAttribute('href') == 'stylesLight.css') {
+        theme.setAttribute('href', 'stylesDark.css');
+    } else {
+        theme.setAttribute('href', 'stylesLight.css');
+    }
+    
+};
+
 //Shopping Tab Script
 //Change Image and description on click
 let phoneCaseButton = document.getElementById('phoneCaseButton');

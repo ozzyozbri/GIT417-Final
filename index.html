@@ -8,8 +8,7 @@
     <!--Add the async or defer attribute to your script tag in the header to prevent errors on page load with the JS.-->
     <script src="streamBlog.js" defer></script>
     <!--Link Stylesheet-->
-    <link rel="stylesheet" href="stylesLight.css">
-    <link rel="stylesheet" href="stylesDark.css">
+    <link id = "theme" rel="stylesheet" href="stylesLight.css">
 
   </head>
 
@@ -17,6 +16,7 @@
     <div class="blacker-box">
         <div class="blackest-box"></div>
             <header>
+                <button onclick="toggleTheme()">Switch mode</button>
                 <h1>Digital Space Ghost</h1>
                 <p>Welcome! My name is Bri and this is my site. I'm a streamer obsessed with all things space, gaming, and art related. Join the club and hang out with me! </p>
                 <p class="bold-paragraph">Ready to board?</p>
@@ -29,6 +29,7 @@
                         <li><a href="#cosmic">Cosmic Dust Club</a></li>
                     </ul>
                 </nav>
+
             </header>
             <main>
                 <section id="shopping">

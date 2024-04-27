@@ -6,3 +6,234 @@
 /*https://www.geeksforgeeks.org/how-to-create-dark-light-mode-for-website-using-javascript-jquery/*/
 
 
+/* Global Styles and header styles */
+
+html {
+    background-image: url('Images/light_background.png');
+    background-size: cover;
+    color: #050A30;
+}
+
+h1 {
+    font-size: 200px;    
+    font-family: beatle, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: white 0px 0px 90px;
+    padding-top: 20px;
+}
+
+.black-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    padding-top: 1px;
+}
+
+.blacker-box {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin:auto;
+    width: 75%;
+    border-radius: 25px;
+    padding-top: 1px;
+}
+
+.blackest-box {
+    background-color: rgba(255, 255, 255, 0.4);
+    margin:auto;
+    width: 60%;
+    border-radius: 25px;
+    padding-top: 1px;
+}
+
+p {
+    font-family: glodok, monospace;
+    color:#274472;
+}
+
+header p {
+    font-size: 25px;
+}
+
+.bold-paragraph {
+    font-size: 20px;
+    padding-bottom: 15px;
+}
+
+h2 {
+    font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 75px;
+}
+
+h3 {
+    font-family: 'ohno-blazeface', 'Brush Script MT', cursive;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+/* Navigation Styling */
+nav ul {
+    padding-top: 20px;
+    list-style-type: none;
+    color: #5885AF;
+    padding-bottom: ;
+}
+
+li {
+    display: inline;
+    margin: 45px;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+a {
+    font-family: 'glodok', 'Courier New', monospace;;
+    font-style: normal;
+    font-weight: 100;
+}
+
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none; 
+    color: inherit;
+  } 
+
+  /* Shopping Section styling */
+ 
+  #shopping h2 {
+    padding-top: 70px;
+    margin: auto;
+  }
+
+  #shopping p {
+    font-size: 20px;
+    margin-top: none;
+  }
+
+  button {
+    background-color: #5885AF; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 3px;
+  }
+
+  #shopping h3 {
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #shopping form {
+    display: block;
+
+  }
+
+  #shopping label {
+    padding: 5px;
+  }
+
+  #textGuess {
+    margin-bottom: 10px;
+  }
+
+  #submit {
+    display: block;
+    background-color:#5885AF;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto;
+    margin: 0 auto;
+  }
+
+
+
+
+
+  /* Stream Section Styling */
+
+  #stream h2 {
+    margin: auto;
+    padding-top: 70px;
+  }
+
+  #stream p {
+    font-size: 20px;
+  }
+
+/* Highlights Section Styling */
+
+#highlights h2 {
+    margin: auto;
+    padding-top: 70px;
+  }
+
+  #highlights p {
+    font-size: 20px;
+  }
+
+
+  /* Cosmic Dust Club Styling */
+
+  #cosmic h2 {
+    margin: auto;
+    padding-top: 70px;
+  }
+
+  #cosmic p {
+    font-size: 20px;
+  }
+
+
+  label {
+    display: block;
+    margin-top: 15px;
+  }
+
+  fieldset {
+    width: auto;
+  }
+
+  fieldset legend {
+    padding-top: 10px;
+  }
+
+  fieldset label {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  #submit-button {
+    display: block;
+    background-color:#5885AF;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  #finalOutput {
+    padding: 15px;
+  }
